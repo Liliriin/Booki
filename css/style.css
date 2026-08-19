@@ -13,18 +13,50 @@
     color: var(--main-color);
 }
 
+
 body {
+    margin:0;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    
+    
+}
+footer {
+    display:flex;
+    justify-content: space-around;
+}
+.logo { 
+    position:absolute;
+    margin-top:5px;
+    width: 60px;
+    height: 20px;
 }
 
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
+.header-nav {
+    display: flex;
+    gap: 50px;
+    
 }
 
+.nav-btn {
+    padding-top: 10px;
+    border-top: 3px solid transparent;
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+ color:#0065FC;
+ border-color:#0065FC; 
+}
+
+    
 a {
     color: inherit;
     text-decoration: none;
