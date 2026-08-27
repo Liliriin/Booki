@@ -91,6 +91,17 @@ footer {
     
 }
 
+.search-btn-mobile {
+    background-color: #0065FC;
+    color: white;
+    border: 1px solid #f2f2f2;
+    padding: 12px 20px 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 12px 12px 0;
+    display:none;
+}
+
 .location {
     background-color: transparent;
     color: #000;
@@ -115,6 +126,10 @@ footer {
     align-items: center;
     height:40px;
     gap: 15px;
+}
+
+.filter-buttons {
+    display:flex;
 }
 
 .filter-btn {
@@ -305,10 +320,16 @@ flex-direction: column;
 }
 /****** Activites***********/
 
+.activities-title {
+    margin-top:50px;
+    margin-bottom:30px;
+}
+
 .activities {
     display:flex;
     flex-direction: row;
     gap:30px;
+    margin-bottom:60px;
 }
 .activities .card-content {
     width: 100%;
@@ -338,6 +359,28 @@ flex-direction: column;
 .activities a {
     flex: 1 1 calc(25% - 30px);
 }
+/****** Footer***********/
+
+
+footer {
+    margin-top:30px;
+    padding:0px 60px;
+    background-color: #f2f2f2;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+
+.footer-column {
+
+    flex:1;
+}
+
+
+
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -379,5 +422,122 @@ flex-direction: column;
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    header {
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .logo { 
+    position:unset;
+    margin-top:20px;
+    width: 60px;
+    height: 20px;
+}
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    
+}
+.nav-btn {
+    display: flex;
+    width: 50%;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    border-top:none;
+    border-bottom: 3px solid transparent;
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+ color:#0065FC;
+ border-color:#0065FC; 
+}
+
+.search-bar {
+    width: 100%;
+}
+.pin-btn {
+    width: 15%;
+}
+
+.location {
+    width: 70%;
+}
+    .search-btn {
+        display:none;
+    }
+
+    .search-btn-mobile{
+        display:block;
+        width: 15%;
+    }
+
+    .filter {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px;
+        
+    }
+
+    .filter-buttons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .filter-btn {
+        flex: 1 1 calc(50% - 20px); 
+        justify-content: center;    
+    }
+
+    .info-text {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hebergements-and-populaires {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+ .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+.populaires-cards {
+    display: flex;
+    flex-direction: column;   /* empile les cards */
+    align-items: center;
+  }
+
+  .populaires-cards .card {
+    flex-direction: row;      /* image + texte côte à côte */
+    width: 100%;               /* s’adapte à la largeur du mobile */
+    margin-top: 20px;
+  }
+
+  .populaires-cards img {
+    width: 70%;               /* image prend 40 % */
+    height: auto;             /* conserve le ratio */
+    border-radius: 10px 0 0 10px;
+  }
+
+  .populaires-cards .card-content {
+    width: 30%;               /* texte prend le reste */
+    padding: 10px;
+  }
 }
