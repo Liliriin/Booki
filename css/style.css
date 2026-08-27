@@ -22,6 +22,11 @@ body {
     margin-left:40px;
     margin-right:40px;
 }
+p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 header {
     display: flex;
@@ -124,12 +129,13 @@ footer {
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    height:40px;
+    min-height:40px;
     gap: 15px;
 }
 
 .filter-buttons {
     display:flex;
+    gap:10px;
 }
 
 .filter-btn {
@@ -341,7 +347,6 @@ flex-direction: column;
 }
 .activities img {
     width: 100%;
-    height: 500px;
     min-height: 500px;
     max-height: 500px;
     object-fit: cover;
@@ -388,6 +393,35 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    h1 {
+    font-size: 1.6rem; 
+  }
+   h2 {
+    font-size: 1.3rem;
+  }
+      .filter {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-start;
+        width: 80%;
+    }
+
+    .filter-btn {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        gap:5px;
+        
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -418,27 +452,35 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activities img {
+        min-height:200px;
+        max-height:200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+  
+    h1 {
+        font-size:1.4em;
+    }
+ h2 {
+    font-size: 1.2rem;
+  }
     header {
         display:flex;
         flex-direction: column;
         gap:10px;
     }
-
+body {
+    margin:0 10px;
+}
     .logo { 
     position:unset;
     margin-top:20px;
-    width: 60px;
-    height: 20px;
+    width: 70px;
+    height: 26px;
 }
 
 .header-nav {
@@ -502,42 +544,72 @@ footer {
         justify-content: center;    
     }
 
-    .info-text {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+   
 
 .hebergements-and-populaires {
         flex-direction: column-reverse;
         width: 100%;
     }
- .populaires {
+
+    .populaires {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 40px;
     }
-    
-.populaires-cards {
-    display: flex;
-    flex-direction: column;   /* empile les cards */
-    align-items: center;
-  }
 
-  .populaires-cards .card {
-    flex-direction: row;      /* image + texte côte à côte */
-    width: 100%;               /* s’adapte à la largeur du mobile */
-    margin-top: 20px;
-  }
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-  .populaires-cards img {
-    width: 70%;               /* image prend 40 % */
-    height: auto;             /* conserve le ratio */
-    border-radius: 10px 0 0 10px;
-  }
+    .populaires-cards a {
+        width: 100%;
+        display: block;
+    }
 
-  .populaires-cards .card-content {
-    width: 30%;               /* texte prend le reste */
-    padding: 10px;
+    .populaires-cards .card {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .populaires-cards img {
+        width: 40%;
+        height: auto;
+        min-height: 160px;
+        max-height: 160px;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+    }
+
+    .populaires-cards .card-content {
+        width: 60%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+.hebergements-and-populaires .hebergements {
+    width: 100%;
+    background-color: white;
   }
+     .hebergements-cards {
+        display:flex;
+        flex-direction: column;
+     }
+
+     .activities {
+        flex-direction:column;
+     }
+
+     .activities img {
+        min-height: 160px;
+        max-height: 160px;
+}
+
+footer {
+    flex-direction: column;
+}
 }
