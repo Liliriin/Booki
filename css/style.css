@@ -61,8 +61,8 @@ footer {
 }
 
 .nav-btn:hover {
- color:#0065FC;
- border-color:#0065FC; 
+ color:var(--main-color);
+ border-color:var(--main-color); 
 }
 
 .search-bar {
@@ -84,10 +84,10 @@ footer {
 }
 
   
- .search-btn {
-    background-color: #0065FC;
+ .search-btn,.search-btn-mobile {
+    background-color:var(--main-color);
     color: white;
-    border: 1px solid #f2f2f2;
+    border: 1px solid var(--main-bg-color);
     padding: 12px 20px 12px 20px;
     font-weight: 600;
     cursor: pointer;
@@ -95,22 +95,15 @@ footer {
     
     
 }
-
-.search-btn-mobile {
-    background-color: #0065FC;
-    color: white;
-    border: 1px solid #f2f2f2;
-    padding: 12px 20px 12px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 0 12px 12px 0;
+.search-btn-mobile
+ {
     display:none;
 }
 
 .location {
     background-color: transparent;
     color: #000;
-    border:1px solid #f2f2f2;
+    border:1px solid var(--main-bg-color);
     padding: 10px 20px;
     font-weight: 600;
     font-size: 1em;
@@ -144,14 +137,14 @@ footer {
     padding:12px 20px;
     font-weight: 600;
     font-size:large;
-    border:3px solid #f2f2f2;
+    border:3px solid var(--main-bg-color);
     
     
 
 }
 
 .filter-btn:hover {
-    background-color: #DEEBFF;
+    background-color: var(--filter-bg-color);
 }  
 
 .info-icon {
@@ -506,8 +499,8 @@ body {
 
 
 .nav-btn:hover {
- color:#0065FC;
- border-color:#0065FC; 
+ color:var(--main-color);
+ border-color:var(--main-color); 
 }
 
 .search-bar {
